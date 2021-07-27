@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'donet build eShopOnWeb.sln'
+        sh 'dotnet build eShopOnWeb.sln'
       }
     }
 
@@ -11,7 +11,7 @@ pipeline {
       parallel {
         stage('Unit') {
           steps {
-            sh 'donet test tests/UnitTests'
+            sh 'dotnet test tests/UnitTests'
           }
         }
 
